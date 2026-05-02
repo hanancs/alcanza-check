@@ -37,7 +37,7 @@ alcanza-check google.com 443
 ```
 
 Output:
-![Example Output](https://raw.githubusercontent.com/username/repo/main/screenshot.png) *(Placeholder)*
+![Example Output](./public/image.png)
 
 ## Development
 
