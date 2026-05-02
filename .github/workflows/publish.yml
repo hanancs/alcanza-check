@@ -4,18 +4,36 @@ on:
     tags:
       - 'v*'
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write
   contents: read
+  packages: write # Required for GitHub Packages
 jobs:
-  publish:
+  publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
+      - run: npm publish --provenance --access public
+
+  publish-gpr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@hanancs'
+      - run: npm ci
+      - run: npm run build --if-present
+      # Change name to scoped name for GitHub Packages
+      - run: npx sed-i 's/"name": "alcanza-check"/"name": "@hanancs\/alcanza-check"/' package.json
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
