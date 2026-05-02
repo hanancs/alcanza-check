@@ -1,0 +1,40 @@
+{
+  "name": "alcanza-check",
+  "version": "1.0.0",
+  "description": "A comprehensive network connectivity checker CLI (ICMP, TCP, DNS, SSL).",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "alcanza-check": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "network",
+    "connectivity",
+    "ping",
+    "telnet",
+    "ssl",
+    "dns",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "cli-table3": "^0.6.4",
+    "picocolors": "^1.0.0"
+  }
+}
