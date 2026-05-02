@@ -1,6 +1,6 @@
 {
   "name": "alcanza-check",
-  "version": "1.0.4",
+  "version": "1.0.12",
   "description": "A comprehensive network connectivity checker CLI (ICMP, TCP, DNS, SSL).",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
