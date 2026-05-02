@@ -6,7 +6,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "bin": {
-    "alcanza-check": "./dist/index.js"
+    "alcanza-check": "dist/index.js"
   },
   "files": [
     "dist"
