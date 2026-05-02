@@ -30,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanancs/alcanza-check.git"
+    "url": "https://github.com/hanancs/alcanza-check"
   },
   "devDependencies": {
     "tsup": "^8.0.2",
