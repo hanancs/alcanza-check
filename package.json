@@ -28,6 +28,10 @@
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanancs/alcanza-check.git"
+  },
   "devDependencies": {
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
