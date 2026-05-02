@@ -1,6 +1,6 @@
 {
   "name": "alcanza-check",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A comprehensive network connectivity checker CLI (ICMP, TCP, DNS, SSL).",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -30,7 +30,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanancs/alcanza-check.git"
+    "url": "https://github.com/hanancs/alcanza-check"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
   },
   "devDependencies": {
     "tsup": "^8.0.2",
